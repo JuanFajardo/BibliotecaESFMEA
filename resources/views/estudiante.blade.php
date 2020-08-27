@@ -2,13 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-	<meta name="title" content="Memoria Anual Buenaventura 2018">
-	<meta name="description" content="Celebramos nuestro 65 aniversario con una posición financiera y productiva sólida">
-	<meta name="keywords" content="Buenaventura, Minería Responsable, Mineros peruanos, Metales preciosos, Operación de minas">
+	<meta name="title" content="BIBLIOTECA VIRTUAL - ESFMEA">
+	<meta name="description" content="BIBLIOTECA VIRTUAL - ESFMEA">
 	<meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	<title>Memoria Anual Buenaventura 2018</title>
+	<title>BIBLIOTECA VIRTUAL - ESFMEA</title>
 	<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/lib/wow/animate.css')}}">
@@ -16,8 +15,8 @@
 <body class="preloader">
 	<header class="cabecera cabecera-desktop">
 		<div class="container-fluid container-especial">
-			<a href="index.html" class="link-logo">
-				<img src="{{asset('assets/img/logo.svg')}}" class="logo">
+			<a href="{{asset('index.php')}}" class="link-logo">
+				<img src="{{asset('assets/img/logo.jpeg')}}" class="logo" style="width:75px;">
 			</a>
 			<div class="botones">
 				<h3>ESCUELA SUPERIOR DE FORMACIÓN DE MAESTROS "EDUARDO AVAROA" </h3>
@@ -41,7 +40,7 @@
 			<div class="row">
 				<div class="col-2 columna-menu-mobile">
 					<a href="index.html" class="link-logo">
-						<img src="{{asset('assets/img/b.svg')}}" class="logo-b">
+						<img src="{{asset('assets/img/logo.jpeg')}}" class="logo-b">
 					</a>
 				</div>
 				<div class="col-6 columna-menu-mobile columna-mobile-contexto">
@@ -60,17 +59,19 @@
 		</div>
 	</header>
 	@include('menuEstudiante')
+
 	<main>
 		<section class="seccion seccion-1" id="inicio">
-			<img src="{{asset('assets/img/tantahuatay.jpg')}}" class="imagen-fondo">
+			<!--<img src="{{asset('assets/img/tantahuatay.jpg')}}" class="imagen-fondo">-->
 			<div class="bloque-b">
-				<img src="{{asset('assets/img/b.svg')}}" class="imagen-b">
+				<img src="{{asset('assets/img/logo.jpeg')}}" class="imagen-b">
 			</div>
 
 			<div class="intro-paso-1">
-        <h1>ESCUELA SUPERIOR <br>
-        DE FORMACIÓN DE <br>
-        MAESTROS "EDUARDO AVAROA"</h1>
+        		<h1>ESCUELA SUPERIOR <br>
+        			DE FORMACIÓN DE <br>
+        			MAESTROS "EDUARDO AVAROA"
+				</h1>
 			</div>
 
 			<div class="intro-paso-2">
@@ -81,112 +82,42 @@
 			</div>
 		</section>
 
-		<section class="seccion seccion-2"  id="operaciones">
+		<section class="seccion seccion-2"  id="bienvenida">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-center">
-						<h2>OPERACIONES</h2>
-						<a href="assets/pdf/operaciones.pdf" target="_blank" class="pdf-mobile pdf1"><i class="fas fa-file-pdf"></i></a>
-						<div class="mensaje"><h3>RESULTADOS DE PRODUCCIÓN</h3></div>
+						<h2>BIENVENIDA</h2>
 					</div>
 				</div>
 				<div class="row borde-verde">
-					<div class="col-12 col-md-6 columna-rosada grupo1">
+
+					<div class="col-12 col-md-12 columna-rosada grupo1">
 						<div class="bloque-columna-rosada">
-							<h3>TAMBOMAYO</h3>
-							<p><span class="numero-grande">129 mil</span> oz Au</p>
+							<p>Te damos la bienvenida al portal de la Biblioteca que provee, comparte y difunde, recursos bibliográficos propios de la Escuela Superior de Formación de Maestros "Eduardo Avaroa", pertenecientes a diversas especialidades.
+
+								<br><br><b>¿Qué ofrecemos?</b><br>
+								Se ofrece una amplia gama de recursos bibliográficos y electrónicos contenidos en: libros, manuales, revistas, libros electrónicos, además de una hemeroteca completa desde la gestión 2011, para apoyar en todo momento el proceso de aprendizaje de la comunidad estudiantil.
+							</p>
 						</div>
 					</div>
-					<div class="col-12 col-md-6 columna-rosada grupo1">
+
+					<div class="col-12 col-md-12 columna-rosada grupo1">
 						<div class="bloque-columna-rosada">
-							<h3>LA ZANJA</h3>
-							<p><span class="numero-grande">72 mil</span> oz Au</p>
+							<p>
+							“De los diversos instrumentos inventados por el hombre, el más asombroso es el libro; todos los demás son extensiones de su cuerpo… Sólo el libro es una extensión de la imaginación y la memoria”. Jorge Luis Borges
+							</p>
 						</div>
 					</div>
-					<div class="col-12 col-md-6 columna-rosada grupo1">
-						<div class="bloque-columna-rosada">
-							<h3>ORCOPAMPA</h3>
-							<p><span class="numero-grande">116 mil</span> oz Au</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 columna-rosada grupo1">
-						<div class="bloque-columna-rosada">
-							<h3>YANACOCHA</h3>
-							<p><span class="numero-grande">515 mil</span> oz Au</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 columna-rosada grupo1">
-						<div class="bloque-columna-rosada">
-							<h3>COIMOLACHE</h3>
-							<p><span class="numero-grande">173 mil</span> oz Au</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 columna-rosada grupo1">
-						<div class="bloque-columna-rosada">
-							<h3>UCHUCCHACUA</h3>
-							<p><span class="numero-grande">15.4 millones</span> oz Ag</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 columna-rosada grupo2 pagina-cerrada">
-						<div class="bloque-columna-rosada">
-							<h3>MALLAY</h3>
-							<p><span class="numero-grande">514 mil</span> oz Ag</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 columna-rosada grupo2 pagina-cerrada">
-						<div class="bloque-columna-rosada">
-							<h3>MARCAPUNTA <span class="aparte">(EL BROCAL)</span></h3>
-							<p><span class="numero-grande">46 mil</span> TM Cu</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 columna-rosada grupo2 pagina-cerrada">
-						<div class="bloque-columna-rosada">
-							<h3>JULCANI</h3>
-							<p><span class="numero-grande">2.5 millones</span> oz Ag</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 columna-rosada grupo2 pagina-cerrada">
-						<div class="bloque-columna-rosada">
-							<h3>TAJO NORTE <span class="aparte">(EL BROCAL)</span></h3>
-							<p><span class="numero-grande">46 mil</span> TM Zn</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 columna-rosada grupo2 pagina-cerrada">
-						<div class="bloque-columna-rosada">
-							<h3>CERRO VERDE</h3>
-							<p><span class="numero-grande">476 mil</span> TM Cu</p>
-						</div>
-					</div>
-					<div class="col-12 paginador">
-						<a href="#" class="pagina activo" data-pg="1">
-							<i class="fas fa-angle-left"></i>
-						</a>
-						<a href="#" class="pagina" data-pg="2">
-							<i class="fas fa-angle-right"></i>
-						</a>
-					</div>
-					<div class="bloque-blanco-icono">
-						<img src="{{asset('assets/img/operaciones.svg')}}" class="img-operaciones">
-					</div>
+					
 				</div>
 			</div>
-			<a class="pdf-fijo pdf1" href="assets/pdf/operaciones.pdf" target="_blank">
-				<span class="izquierda">
-					Descargar<br>sección completa
-				</span>
-				<span class="derecha">
-					<i class="fas fa-file-pdf"></i>
-				</span>
-			</a>
-			<div class="adorno adorno-1">
-				<img src="{{asset('assets/img/recurso_operaciones.png')}}" class="img-adorno">
-			</div>
 		</section>
-		<section class="seccion seccion-3"  id="proyectos">
+
+		<section class="seccion seccion-3"  id="misionvision">
 			<div class="container container-especial">
 				<div class="row">
 					<div class="col-12 text-center">
-						<h2>PROYECTOS</h2>
+						<h2>MISIÓN, VISIÓN</h2>
 						<a href="assets/pdf/proyectos.pdf" target="_blank" class="pdf-mobile pdf2"><i class="fas fa-file-pdf"></i></a>
 					</div>
 				</div>
@@ -195,21 +126,12 @@
 						<img src="assets/img/proyecto1.png" class="imagen-fondo-proyecto">
 						<div class="fondo-verde">
 							<div class="titulo-proyecto">
-								<h4>Prefactibilidad</h4>
+								<h4>MISIÓN</h4>
 							</div>
 							<div class="lista-items-proyecto">
-								<div class="item-proyecto">
-									<span class="hexagono">1</span>
-									<span class="item-titulo-proyecto">
-										SAN GABRIEL
-									</span>
-								</div>
-								<div class="item-proyecto">
-									<span class="hexagono">2</span>
-									<span class="item-titulo-proyecto">
-										TRAPICHE
-									</span>
-								</div>
+								<h3>MISIÓN
+									Somos una institución formadora de Maestros y Maestras que orienta los procesos formativos, con pertinencia académica a la realidad social, cultural y económica del estudiante en el modelo Socio comunitario Productivo que permite responder con idoneidad a las demandas de la región y el país.
+								</h3>
 							</div>
 						</div>
 					</div>
@@ -217,194 +139,82 @@
 						<img src="assets/img/proyecto2.png" class="imagen-fondo-proyecto">
 						<div class="fondo-verde">
 							<div class="titulo-proyecto">
-								<h4>Conceptual</h4>
+								<h4>VISIÓN</h4>
 							</div>
 							<div class="lista-items-proyecto">
-								<div class="item-proyecto">
-									<span class="hexagono">1</span>
-									<span class="item-titulo-proyecto">
-										COIMOLACHE<br>SULFUROS
-									</span>
-								</div>
+								<h3> Ser una Escuela Superior de formación de Maestras y Maestros reconocida por su excelencia académica, en la pluralidad socio política económica y cultural, en el modelo sociocomunitario productivo, con principios y valores sociocomunitarios que transformen la sociedad y las potencialidades productivas de la región en el marco del vivir bien. 
+								</h3>								
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-md-6 col-lg-4 columna-proyecto ">
-						<img src="assets/img/proyecto3.png" class="imagen-fondo-proyecto">
-						<div class="fondo-verde">
-							<div class="titulo-proyecto titulo-proyecto-especial">
-								<h4>Por ingresar a fase conceptual</h4>
-							</div>
-							<div class="lista-items-proyecto">
-								<div class="item-proyecto">
-									<span class="hexagono">1</span>
-									<span class="item-titulo-proyecto">
-										YUMPAQ
-									</span>
-								</div>
-								<div class="item-proyecto">
-									<span class="hexagono">2</span>
-									<span class="item-titulo-proyecto">
-										EL FAIQUE
-									</span>
-								</div>
-								<div class="item-proyecto">
-									<span class="hexagono">3</span>
-									<span class="item-titulo-proyecto">
-										SAN GREGORIO
-									</span>
-								</div>
-								<div class="item-proyecto">
-									<span class="hexagono">4</span>
-									<span class="item-titulo-proyecto">
-										EMPERATRIZ
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
+
+					
 				</div>
 			</div>
-			<a class="pdf-fijo pdf2" href="assets/pdf/proyectos.pdf" target="_blank">
-				<span class="izquierda">
-					Descargar<br>sección completa
-				</span>
-				<span class="derecha">
-					<i class="fas fa-file-pdf"></i>
-				</span>
-			</a>
 		</section>
-		<section class="seccion seccion-4"  id="sostenibilidad">
+		<br><br>
+		<section class="seccion seccion-4"  id="organigrama">
 			<div class="adorno adorno-2">
 				<img src="assets/img/recurso_sostenibilidad.png" class="img-adorno">
 			</div>
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-center">
-						<h2>SOSTENIBILIDAD</h2>
-						<h4>Aplicamos las mejores prácticas de la industria para darle sostenibilidad a nuestras operaciones.</h4>
-						<a href="assets/pdf/sostenibilidad.pdf" target="_blank" class="pdf-mobile pdf3"><i class="fas fa-file-pdf"></i></a>
+						<h2>ORGANIGRAMA</h2>
+						<img src="{{asset('assets/img/unnamed.png')}}" alt="">
+						
 					</div>
 				</div>
-				<div class="row justify-content-center">
-					<div class="col-12 col-md-6 col-lg-4 coluna-bloque-sostenibilidad wow fadeIn" data-wow-duration="1.5s">
-						<div class="bloque-contenido-sostenibilidad">
-							<img src="assets/img/sostenibilidad1.png" class="img-sostenibilidad img2">
-							<p>Seguimos fortaleciendo nuestra cultura de seguridad para alcanzar la meta de cero accidentes.</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 col-lg-4 coluna-bloque-sostenibilidad wow fadeIn" data-wow-duration="1.5s">
-						<div class="bloque-contenido-sostenibilidad">
-							<img src="assets/img/sostenibilidad3.png" class="img-sostenibilidad">
-							<p>Mantuvimos relaciones cordiales y de confianza con las comunidades e impulsamos el desarrollo sostenible bajo la responsabilidad social compartida.</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 col-lg-4 coluna-bloque-sostenibilidad wow fadeIn" data-wow-duration="1.5s">
-						<div class="bloque-contenido-sostenibilidad">
-							<img src="assets/img/sostenibilidad2.png" class="img-sostenibilidad img3">
-							<p>Aplicamos las mejores prácticas ambientales e innovamos en el manejo de aguas y cierre de minas para dar sostenibilidad a nuestras operaciones.</p>
-						</div>
-					</div>
-				</div>
+				
 			</div>
-			<a class="pdf-fijo pdf3" href="assets/pdf/sostenibilidad.pdf" target="_blank">
-				<span class="izquierda">
-					Descargar<br>sección completa
-				</span>
-				<span class="derecha">
-					<i class="fas fa-file-pdf"></i>
-				</span>
-			</a>
+			
 		</section>
-		<section class="seccion seccion-5"  id="finanzas">
-			<img src="assets/img/mina.jpg" class="imagen-fondo">
-			<div class="container">
-				<div class="row fila-cabecera">
-					<div class="col-12 text-center">
-						<h2>FINANZAS</h2>
-						<a href="assets/pdf/finanzas.pdf" target="_blank" class="pdf-mobile pdf2"><i class="fas fa-file-pdf"></i></a>
-					</div>
-				</div>
-				<div class="row justify-content-center">
-					<div class="col-12 col-md-4 columna-bloque-finanza wow fadeIn" data-wow-duration="1.5s">
-						<div class="bloque-finanzas">
-							<p class="texto-verde"><span class="numero-grande">1.30x a 0.99x</span></p>
-							<p>se redujo el ratio de deuda neta sobre EBITDA.</p>
 
-						</div>
-					</div>
-					<div class="col-12 col-md-4 columna-bloque-finanza wow fadeIn" data-wow-duration="1.5s">
-						<div class="bloque-finanzas">
-							<p class="texto-verde">US$ <span class="numero-grande">369.2</span> millones </p>
-							<p>fue la posición <br>de caja final.</p>
-						</div>
-					</div>
-					<div class="col-12 col-md-4 columna-bloque-finanza wow fadeIn" data-wow-duration="1.5s">
-						<div class="bloque-finanzas">
-							<p class="texto-verde">US$ <span class="numero-grande">111.3</span> millones</p>
-							<p>fue el CAPEX desembolsado en 2018.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<a class="pdf-fijo pdf4" href="assets/pdf/finanzas.pdf" target="_blank">
-				<span class="izquierda">
-					Descargar<br>sección completa
-				</span>
-				<span class="derecha">
-					<i class="fas fa-file-pdf"></i>
-				</span>
-			</a>
-		</section>
-		<section class="seccion seccion-6"  id="anexos">
+		
+		<section class="seccion seccion-6"  id="contacto">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<h2>ANEXOS</h2>
+						<h2>CONTACTO</h2>
 					</div>
 				</div>
 				<div class="row justify-content-center">
 					<div class="col-12 col-md-6 col-lg-5 wow fadeIn" data-wow-duration="1.5s">
 						<a href="assets/pdf/analisis_y_discusion_de_gerencia.pdf" target="_blank"class="bloque-anexos">
 							<span class="izquierda">
-								Análisis y discusión<br>
-								de Gerencia
+								Telefono<br>
+								626262
 							</span>
 							<span class="derecha">
-								<i class="fas fa-file-pdf"></i>
+								<i class="fas fa-phone"></i>
 							</span>
 						</a>
 					</div>
 					<div class="col-12 col-md-6 col-lg-5 wow fadeIn" data-wow-duration="1.5s">
 						<a href="assets/pdf/resumen_de_operaciones.pdf" target="_blank" class="bloque-anexos">
 							<span class="izquierda">
-								Resumen de<br>
+								Correo<br>
 								operaciones
 							</span>
 							<span class="derecha">
-								<i class="fas fa-file-pdf"></i>
+								<i class="fas fa-envelope"></i>
 							</span>
 						</a>
 					</div>
 					<div class="col-12 col-md-6 col-lg-5 wow fadeIn" data-wow-duration="1.5s">
 						<a href="assets/pdf/estructura_accionaria.pdf" target="_blank" class="bloque-anexos">
 							<span class="izquierda">
-								Estructura<br>
-								accionaria
+								Direccion<br>
+								Calle
 							</span>
 							<span class="derecha">
-								<i class="fas fa-file-pdf"></i>
+								<i class="fas fa-home"></i>
 							</span>
 						</a>
 					</div>
 				</div>
 			</div>
-			<div class="adorno-mobile">
-				<img src="{{asset('assets/img/adrono-mobile.png')}}" class="img-adorno-mobile">
-			</div>
-			<div class="adorno adorno-1">
-				<img src="{{asset('assets/img/recurso_anexos.png')}}" class="img-adorno">
-			</div>
+			
 		</section>
 
 	</main>

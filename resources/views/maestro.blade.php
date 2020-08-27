@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-	<meta name="title" content="Memoria Anual Buenaventura 2018">
-	<meta name="description" content="Celebramos nuestro 65 aniversario con una posición financiera y productiva sólida">
-	<meta name="keywords" content="Buenaventura, Minería Responsable, Mineros peruanos, Metales preciosos, Operación de minas">
+	<meta name="title" content="BIBLIOTECA VIRTUAL - ESFMEA">
+	<meta name="description" content="BIBLIOTECA VIRTUAL - ESFMEA">
 	<meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	<title>Memoria Anual Buenaventura 2018</title>
+	<title>BIBLIOTECA VIRTUAL - ESFMEA</title>
 	<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{URL::asset('asset/DataTables/datatables.min.css') }}">
 	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/lib/wow/animate.css')}}">
 </head>
@@ -73,24 +73,32 @@
       </div>
     </section>
 
-		<section class="seccion seccion-6"  id="sistemas">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<h2>@yield('titulo2')</h2>
-            @yield('cuerpo2')
-					</div>
+	<section class="seccion seccion-6"  id="sistemas">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h2>@yield('titulo2')</h2>
+    		        @yield('cuerpo2')
 				</div>
 			</div>
-			<div class="adorno-mobile">
-				<img src="{{asset('assets/img/adrono-mobile.png')}}" class="img-adorno-mobile">
-			</div>
-			<div class="adorno adorno-1">
-				<img src="{{asset('assets/img/recurso_anexos.png')}}" class="img-adorno">
-			</div>
-		</section>
+		</div>
+		<div class="adorno-mobile">
+			<img src="{{asset('assets/img/adrono-mobile.png')}}" class="img-adorno-mobile">
+		</div>
+		<div class="adorno adorno-1">
+			<img src="{{asset('assets/img/recurso_anexos.png')}}" class="img-adorno">
+		</div>
+	</section>
 
-
+    <br><br><br>
+    <section class="seccion seccion-3"  id="comentario">
+      <div class="container">
+        <div class="col-12 text-center">
+          <h2>COMENTARIOS</h2>
+            
+        </div>
+      </div>
+    </section>
 	</main>
 	<div class="overlay"><div id="loader"></div></div>
   <br>
@@ -103,6 +111,7 @@
   </footer>
 	<script src="{{asset('assets/js/jquery.js')}}"></script>
 	<script src="{{asset('assets/js/jquery-ui.js')}}"></script>
+	<script src="{{ URL::asset('asset/DataTables/datatables.min.js') }}" type="text/javascript"></script>
 	<script src="{{asset('assets/js/popper.min.js')}}"></script>
 	<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
 	<script src="{{asset('assets/lib/wow/wow.js')}}"></script>

@@ -33,7 +33,7 @@ class EstudianteController extends Controller
     
     $ver = "SI";
 
-    if($libro != "libro"){
+    if($libro->tipo != "libro"){
       $contador = \App\Visita::Where('tipo', '=', 'sistematisaciones')->where('id_user', '=', $idUser)->count();
       $ver = $contador<5 ?  "SI" : "NO";
     }

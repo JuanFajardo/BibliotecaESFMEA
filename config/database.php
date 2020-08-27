@@ -60,7 +60,7 @@ return [
             'port' => '5432',
             'database' => 'biblioteca',
             'username' => 'postgres',
-            'password' => 'Sis@2019',
+            'password' => 'rrh2017',
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',

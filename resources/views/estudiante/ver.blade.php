@@ -12,7 +12,13 @@ Libro - {{$libro->titulo}}
 @section('cuerpo1')
 <!-- Libros -->
 @if($ver != "NO")
-<embed src="{{asset('/RughHXvNTFm9zzBett0zzPpFGaE2r7mjB9/'.$libro->archivo)}}" width="100%" height="575" toolbar="0">
+<div style="position:relative;width:100%;">
+    <div style="width:100%; background:#000;height:45px;">
+    </div>
+    <iframe src="{{asset('/RughHXvNTFm9zzBett0zzPpFGaE2r7mjB9/'.$libro->archivo)}}" style="width:100%;height:670px;"></iframe>
+</div>
+@else
+<label class="btn btn-danger"> Su numero de intentos de visualizar sistematizaciones llego al limite</label>
 @endif
 @endsection
 
