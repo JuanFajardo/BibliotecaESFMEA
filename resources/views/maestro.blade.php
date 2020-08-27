@@ -21,14 +21,7 @@
 			</a>
 			<div class="botones">
 				<h3>ESCUELA SUPERIOR DE FORMACIÓN DE MAESTROS "EDUARDO AVAROA" </h3>
-				<a href="{{asset('/index.php/login')}}" target="_blank" class="link-cabecera">
-					<span class="izquierda">
-					       Ingresar
-					</span>
-					<span class="derecha">
-						<i class="fas fa-user"></i>
-					</span>
-				</a>
+				@include('login')
 			</div>
 			<a href="#" class="burguer circulo">
 				<i class="fas fa-bars"></i>
@@ -82,24 +75,47 @@
 				</div>
 			</div>
 		</div>
-		<div class="adorno-mobile">
-			<img src="{{asset('assets/img/adrono-mobile.png')}}" class="img-adorno-mobile">
-		</div>
-		<div class="adorno adorno-1">
-			<img src="{{asset('assets/img/recurso_anexos.png')}}" class="img-adorno">
-		</div>
-	</section>
 
-    <br><br><br>
-    <section class="seccion seccion-3"  id="comentario">
-      <div class="container">
-        <div class="col-12 text-center">
-          <h2>COMENTARIOS</h2>
-            
+	</section>
+  <br><br><br>
+  <section class="seccion seccion-3"  id="comentario">
+    <div class="container">
+      <div class="col-12 text-center">
+        <h2>COMENTARIOS</h2>
+        {!! Form::open(['route'=>['comentario'], 'method'=>'POST', 'id'=>'form-delete']) !!}
+
+        {!! Form::text('remitente', null, ['class'=>'form-control', 'placeholder'=>'Remitente', 'required']) !!}
+        {!! Form::email('correo', null, ['class'=>'form-control', 'placeholder'=>'Correo@Correo', 'required']) !!}
+        {!! Form::text('asunto', null, ['class'=>'form-control', 'placeholder'=>'Asunto', 'required']) !!}
+        {!! Form::textarea('mensaje', null, ['class'=>'form-control', 'required']) !!}
+        {!! Form::submit('Enviar comentario', ['class'=>'btn btn-primary', 'placeholder'=>'Mensaje']) !!}
+        {!! Form::close() !!}
+      </div>
+    </div>
+  </section>
+</main>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">¿ Cerrar Session?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body"> Para <b>Cerrar Session</b> de click en CERRAR <br>
+          caso contrario CANCELAR   </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          {!! Form::open(['route'=>['logout'], 'method'=>'POST', 'id'=>'form-delete']) !!}
+          {!! Form::submit('Cerrar', ['class'=>'btn btn-primary']) !!}
+          {!! Form::close() !!}
         </div>
       </div>
-    </section>
-	</main>
+    </div>
+  </div>
+
 	<div class="overlay"><div id="loader"></div></div>
   <br>
   <footer class="sticky-footer">

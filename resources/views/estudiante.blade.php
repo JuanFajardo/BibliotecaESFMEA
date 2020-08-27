@@ -20,14 +20,9 @@
 			</a>
 			<div class="botones">
 				<h3>ESCUELA SUPERIOR DE FORMACIÓN DE MAESTROS "EDUARDO AVAROA" </h3>
-				<a href="{{asset('/index.php/login')}}" target="_blank" class="link-cabecera">
-					<span class="izquierda">
-					       Ingresar
-					</span>
-					<span class="derecha">
-						<i class="fas fa-user"></i>
-					</span>
-				</a>
+
+        @include('login')
+
 			</div>
 			<a href="#" class="burguer circulo">
 				<i class="fas fa-bars"></i>
@@ -59,7 +54,6 @@
 		</div>
 	</header>
 	@include('menuEstudiante')
-
 	<main>
 		<section class="seccion seccion-1" id="inicio">
 			<!--<img src="{{asset('assets/img/tantahuatay.jpg')}}" class="imagen-fondo">-->
@@ -108,7 +102,7 @@
 							</p>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</section>
@@ -142,13 +136,13 @@
 								<h4>VISIÓN</h4>
 							</div>
 							<div class="lista-items-proyecto">
-								<h3> Ser una Escuela Superior de formación de Maestras y Maestros reconocida por su excelencia académica, en la pluralidad socio política económica y cultural, en el modelo sociocomunitario productivo, con principios y valores sociocomunitarios que transformen la sociedad y las potencialidades productivas de la región en el marco del vivir bien. 
-								</h3>								
+								<h3> Ser una Escuela Superior de formación de Maestras y Maestros reconocida por su excelencia académica, en la pluralidad socio política económica y cultural, en el modelo sociocomunitario productivo, con principios y valores sociocomunitarios que transformen la sociedad y las potencialidades productivas de la región en el marco del vivir bien.
+								</h3>
 							</div>
 						</div>
 					</div>
 
-					
+
 				</div>
 			</div>
 		</section>
@@ -162,15 +156,15 @@
 					<div class="col-12 text-center">
 						<h2>ORGANIGRAMA</h2>
 						<img src="{{asset('assets/img/unnamed.png')}}" alt="">
-						
+
 					</div>
 				</div>
-				
+
 			</div>
-			
+
 		</section>
 
-		
+
 		<section class="seccion seccion-6"  id="contacto">
 			<div class="container">
 				<div class="row">
@@ -214,10 +208,31 @@
 					</div>
 				</div>
 			</div>
-			
-		</section>
 
+		</section>
 	</main>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">¿ Cerrar Session?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body"> Para <b>Cerrar Session</b> de click en CERRAR <br>
+          caso contrario CANCELAR   </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          {!! Form::open(['route'=>['logout'], 'method'=>'POST', 'id'=>'form-delete']) !!}
+          {!! Form::submit('Cerrar', ['class'=>'btn btn-primary']) !!}
+          {!! Form::close() !!}
+        </div>
+      </div>
+    </div>
+  </div>
+
 	<div class="overlay"><div id="loader"></div></div>
 	<script src="{{asset('assets/js/jquery.js')}}"></script>
 	<script src="{{asset('assets/js/jquery-ui.js')}}"></script>

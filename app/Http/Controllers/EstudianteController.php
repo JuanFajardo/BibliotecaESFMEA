@@ -30,7 +30,7 @@ class EstudianteController extends Controller
     $dato->tipo       = $libro->tipo;
     $dato->fecha      = date('Y-m-d');
     $dato->save();
-    
+
     $ver = "SI";
 
     if($libro->tipo != "libro"){
@@ -39,5 +39,16 @@ class EstudianteController extends Controller
     }
 
     return view('estudiante.ver', compact('libro', 'ver'));
+  }
+
+  public function postComentario(Request $request){
+    $dato = new \App\Comentario;
+    $dato->remitente = $request->remitente;
+    $dato->correo = $request->correo;
+    $dato->asunto = $request->asunto;
+    $dato->mensaje = $request->mensaje;
+    $dato->id_user = \auth::user()->id;
+    $dato->save();
+    return redirect('Estudiante');
   }
 }

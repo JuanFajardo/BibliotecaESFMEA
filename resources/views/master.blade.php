@@ -34,7 +34,7 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        
+
         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
@@ -93,7 +93,9 @@
             caso contrario CANCELAR   </div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <a class="btn btn-primary" href="login.html">Cerrar</a>
+            {!! Form::open(['route'=>['logout'], 'method'=>'POST', 'id'=>'form-delete']) !!}
+            {!! Form::submit('Cerrar', ['class'=>'btn btn-primary']) !!}
+            {!! Form::close() !!}
           </div>
         </div>
       </div>

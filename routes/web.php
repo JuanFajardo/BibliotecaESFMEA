@@ -33,6 +33,7 @@ Route::get('/home', function(){
 
 Route::get('/Estudiante', 'EstudianteController@index');
 Route::get('/Estudiante/Ver/{id}', 'EstudianteController@getVer');
+Route::post('/Estudiante/Comentario', 'EstudianteController@postComentario')->name('comentario');
 
 Route::resource('Libro', 'LibroController');
 Route::get('/Listar/Categoria/{id}', 'CategoriaController@getListarSub');
