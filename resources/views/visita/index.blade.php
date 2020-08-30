@@ -13,22 +13,22 @@
       <div class="modal-body panel-body">
         {!! Form::open(['accept-charset'=>'UTF-8', 'enctype'=>'multipart/form-data', 'method'=>'POST', 'files'=>true, 'autocomplete'=>'off', 'id'=>'form-insert'] ) !!}
 
-		 <div class="form-group"> 
-			 <label for='ip_' >IP</label> 
-			 {!! Form::text('ip', null, ['class'=>'form-control', 'id'=>'ip_', 'required']) !!} 
-		 </div> 
-		 <div class="form-group"> 
-			 <label for='navegador_' >NAVEGADOR</label> 
-			 {!! Form::text('navegador', null, ['class'=>'form-control', 'id'=>'navegador_', 'required']) !!} 
-		 </div> 
-		 <div class="form-group"> 
-			 <label for='id_user_' >ID_USER</label> 
-			 {!! Form::text('id_user', null, ['class'=>'form-control', 'id'=>'id_user_', 'required']) !!} 
-		 </div> 
-		 <div class="form-group"> 
-			 <label for='id_libro_' >ID_LIBRO</label> 
-			 {!! Form::text('id_libro', null, ['class'=>'form-control', 'id'=>'id_libro_', 'required']) !!} 
-		 </div> 
+		 <div class="form-group">
+			 <label for='ip_' >IP</label>
+			 {!! Form::text('ip', null, ['class'=>'form-control', 'id'=>'ip_', 'required']) !!}
+		 </div>
+		 <div class="form-group">
+			 <label for='navegador_' >NAVEGADOR</label>
+			 {!! Form::text('navegador', null, ['class'=>'form-control', 'id'=>'navegador_', 'required']) !!}
+		 </div>
+		 <div class="form-group">
+			 <label for='id_user_' >ID_USER</label>
+			 {!! Form::text('id_user', null, ['class'=>'form-control', 'id'=>'id_user_', 'required']) !!}
+		 </div>
+		 <div class="form-group">
+			 <label for='id_libro_' >ID_LIBRO</label>
+			 {!! Form::text('id_libro', null, ['class'=>'form-control', 'id'=>'id_libro_', 'required']) !!}
+		 </div>
 
         {!! Form::submit('A&ntilde;adir', ['class'=>'agregar btn btn-primary']) !!}
         {!! Form::close() !!}
@@ -50,22 +50,22 @@
       <div class="modal-body panel-body">
       {!! Form::open(['route'=>['Visita.update', ':DATO_ID'], 'method'=>'PATCH', 'id'=>'form-update' ])!!}
 
-		 <div class="form-group"> 
-			 <label for=" ip " >IP</label> 
-			 {!! Form::text('ip', null, ['class'=>'form-control', 'id'=>'ip', 'required']) !!} 
-		 </div> 
-		 <div class="form-group"> 
-			 <label for=" navegador " >NAVEGADOR</label> 
-			 {!! Form::text('navegador', null, ['class'=>'form-control', 'id'=>'navegador', 'required']) !!} 
-		 </div> 
-		 <div class="form-group"> 
-			 <label for=" id_user " >ID_USER</label> 
-			 {!! Form::text('id_user', null, ['class'=>'form-control', 'id'=>'id_user', 'required']) !!} 
-		 </div> 
-		 <div class="form-group"> 
-			 <label for=" id_libro " >ID_LIBRO</label> 
-			 {!! Form::text('id_libro', null, ['class'=>'form-control', 'id'=>'id_libro', 'required']) !!} 
-		 </div> 
+		 <div class="form-group">
+			 <label for=" ip " >IP</label>
+			 {!! Form::text('ip', null, ['class'=>'form-control', 'id'=>'ip', 'required']) !!}
+		 </div>
+		 <div class="form-group">
+			 <label for=" navegador " >NAVEGADOR</label>
+			 {!! Form::text('navegador', null, ['class'=>'form-control', 'id'=>'navegador', 'required']) !!}
+		 </div>
+		 <div class="form-group">
+			 <label for=" id_user " >ID_USER</label>
+			 {!! Form::text('id_user', null, ['class'=>'form-control', 'id'=>'id_user', 'required']) !!}
+		 </div>
+		 <div class="form-group">
+			 <label for=" id_libro " >ID_LIBRO</label>
+			 {!! Form::text('id_libro', null, ['class'=>'form-control', 'id'=>'id_libro', 'required']) !!}
+		 </div>
 
       {!! Form::submit('Actualizar ', ['class'=>'btn btn-warning']) !!}
       {!! Form::close() !!}
@@ -77,15 +77,26 @@
 
 
 @section('cuerpo')
+
+{!! Form::open(['route'=>'Reporte.Visita', 'accept-charset'=>'UTF-8', 'enctype'=>'multipart/form-data', 'method'=>'POST', 'files'=>true, 'autocomplete'=>'off', 'id'=>'form-insert'] ) !!}
+  <div class="form-group">
+  <label for='inicio' >Fecha Inicio</label>
+  {!! Form::date('inicio', null, ['class'=>'form-control', 'id'=>'inicio']) !!}
+
+  <label for='fin' >Fecha Fin</label>
+  {!! Form::date('fin', null, ['class'=>'form-control', 'id'=>'fin']) !!}
+  </div>
+{!! Form::submit('Generar Reporte', ['class'=>'agregar btn btn-success']) !!}
+{!! Form::close() !!}
+
+<br><br>
 <table id="tablaAgenda" class="table display" cellspacing="0" width="100%">
   <thead>
     <tr>
-
 			 <th> IP </th>
 			 <th> NAVEGADOR </th>
-			 <th> ID_USER </th>
-			 <th> ID_LIBRO </th>
-
+			 <th> USUARIO </th>
+			 <th> LIBRO </th>
         <th>ACCIONES</th>
     </tr>
    </thead>
@@ -95,11 +106,10 @@
 
 			 <td> {{ $dato->ip }} </td>
 			 <td> {{ $dato->navegador }} </td>
-			 <td> {{ $dato->id_user }} </td>
-			 <td> {{ $dato->id_libro }} </td>
+			 <td> {{ $dato->name }} </td>
+			 <td> {{ $dato->titulo }} </td>
 
        <td>
-         <a href="#modalAgregar"  data-toggle="modal" data-target="" class="ingredientes" style="color: #109813;"> <li class="fa fa-folder-open"></li></a>
          <a href="#modalModifiar"  data-toggle="modal" data-target="" class="actualizar" style="color: #B8823B;"> <li class="fa fa-edit"></li></a>
          <a href="#"  data-toggle="modal" data-target="" style="color: #ff0000;" class="eliminar"> <li class="fa fa-trash"></li></a>
        </td>
@@ -150,10 +160,10 @@
       if(data.length > 0){
         $.each(data, function(index, el) {
 
-		 $('#ip').val(el.ip); 
-		 $('#navegador').val(el.navegador); 
-		 $('#id_user').val(el.id_user); 
-		 $('#id_libro').val(el.id_libro); 
+		 $('#ip').val(el.ip);
+		 $('#navegador').val(el.navegador);
+		 $('#id_user').val(el.id_user);
+		 $('#id_libro').val(el.id_libro);
 
         });
       }

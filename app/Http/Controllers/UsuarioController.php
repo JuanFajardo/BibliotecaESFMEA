@@ -27,7 +27,7 @@ class UsuarioController extends Controller
   protected function validator(array $data){
       return Validator::make($data, [
           'name' => 'required|max:255',
-          'email' => 'required|email|max:255',
+          //'email' => 'required|email|max:255',
           'password' => 'required|confirmed|min:6',
       ]);
   }
@@ -37,25 +37,7 @@ class UsuarioController extends Controller
     $dato = new User;
     $dato->fill($data->all());
     $dato->save();
-    /*
-      User::create([
-          'name'        => $data['name'],
-          'email'       => $data['email'],
-          'password'    => bcrypt($data['password']),
-          'ci'          => $data['ci'],
-          'ap_paterno'  => $data['ap_paterno'],
-          'ap_materno'  => $data['ap_materno'],
-          'nombres'     => $data['nombres'],
-          'nivel'       => $data['nivel'],
-          'paralelo'    => $data['paralelo'],
-          'especialidad'=> $data['especialidad'],
-          'reg_estudiante'=> $data['reg_estudiante'],
-          'activo'      => $data['activo'],
-          'grupo'       => $data['grupo'],
-          'password'    => bcrypt($data['password'])
-      ]);
-      */
-      return redirect('/usuarios');
+    return redirect('/usuarios');
   }
 
   public function edit($id){

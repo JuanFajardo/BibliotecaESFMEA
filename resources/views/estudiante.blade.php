@@ -20,7 +20,6 @@
 			</a>
 			<div class="botones">
 				<h3>ESCUELA SUPERIOR DE FORMACIÓN DE MAESTROS "EDUARDO AVAROA" </h3>
-
         @include('login')
 
 			</div>
@@ -34,18 +33,16 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-2 columna-menu-mobile">
-					<a href="index.html" class="link-logo">
-						<img src="{{asset('assets/img/logo.jpeg')}}" class="logo-b">
+					<a href="{{asset('index.php')}}" class="link-logo">
+						<img src="{{asset('assets/img/favicon.jpeg')}}" class="logo-b">
 					</a>
 				</div>
 				<div class="col-6 columna-menu-mobile columna-mobile-contexto">
-					<span class="numero-grande">2018</span>
-					<span>Memoria<br>Anual</span>
+					<span class="numero-grande">2020</span>
+					<span>ESCUELA SUPERIOR DE FORMACIÓN<br>
+          			DE MAESTROS "EDUARDO AVAROA"</span>
 				</div>
 				<div class="col-4 columna-menu-mobile columna-menu-botones">
-					<a href="assets/pdf/memoria_completa.pdf" target="_blank" class="link-pdf">
-						<i class="fas fa-file-pdf"></i>
-					</a>
 					<a href="#" class="burguer circulo">
 						<i class="fas fa-bars"></i>
 					</a>
@@ -58,21 +55,25 @@
 		<section class="seccion seccion-1" id="inicio">
 			<!--<img src="{{asset('assets/img/tantahuatay.jpg')}}" class="imagen-fondo">-->
 			<div class="bloque-b">
-				<img src="{{asset('assets/img/logo.jpeg')}}" class="imagen-b">
+				<img src="{{asset('assets/img/favicon.jpeg')}}" class="logo-b">
 			</div>
 
 			<div class="intro-paso-1">
-        		<h1>ESCUELA SUPERIOR <br>
+        <h1>ESCUELA SUPERIOR <br>
         			DE FORMACIÓN DE <br>
         			MAESTROS "EDUARDO AVAROA"
 				</h1>
 			</div>
 
 			<div class="intro-paso-2">
-				<h2>BIBLIOTECA VIRTUAL<br>"ESFMEA"</h2>
-				<h3>Libros virtuales <br> Documentos de sistematisaciones</h3>
-				<p><b>Lic.</b></p>
-				<p>Responsable</p>
+				<h2>BIBLIOTECA DIGITAL Y VIRTUAL <br>ESFM-EA</h2>
+        <h3>
+          <ul>
+            <li>SISTEMATIZACIONES DE EXPERIENCIAS EDUCATIVAS</li>
+            <li>LIBROS VIRTUALES</li>
+          </ul>
+        </h3>
+				<p><b>UNIDAD DE BIBLIOTECA</b></p>
 			</div>
 		</section>
 
@@ -87,10 +88,9 @@
 
 					<div class="col-12 col-md-12 columna-rosada grupo1">
 						<div class="bloque-columna-rosada">
-							<p>Te damos la bienvenida al portal de la Biblioteca que provee, comparte y difunde, recursos bibliográficos propios de la Escuela Superior de Formación de Maestros "Eduardo Avaroa", pertenecientes a diversas especialidades.
+							<p>Bienvedid@ al portal de la Biblioteca Digital y Virtual de la <b>Escuela Superior de Formación de Maestros "Eduardo Avaroa".</b>
+                Este portal se encuentra destinado a contribuir en el proceso de formación del futuro maestr@, mediante la consulta a la colección bibliográfica virtual disponible, así como de las sistematizaciones de experiencias educativas, generadas en gestiones anteriores.
 
-								<br><br><b>¿Qué ofrecemos?</b><br>
-								Se ofrece una amplia gama de recursos bibliográficos y electrónicos contenidos en: libros, manuales, revistas, libros electrónicos, además de una hemeroteca completa desde la gestión 2011, para apoyar en todo momento el proceso de aprendizaje de la comunidad estudiantil.
 							</p>
 						</div>
 					</div>
@@ -98,7 +98,55 @@
 					<div class="col-12 col-md-12 columna-rosada grupo1">
 						<div class="bloque-columna-rosada">
 							<p>
-							“De los diversos instrumentos inventados por el hombre, el más asombroso es el libro; todos los demás son extensiones de su cuerpo… Sólo el libro es una extensión de la imaginación y la memoria”. Jorge Luis Borges
+                <h3>¿Qué ofrecemos?</h3><br>
+                Aquí podrá encontrar el detalle de la bibliografía, relacionada al contenido curricular de las asignaturas que se cursan en la ESFM-EA, a lo largo del proceso de formación del futuro maestr@, como:<br><br>
+                <ul>
+                  <li><p> Libros de formación general para 1° y 2° año. </p></li>
+                  <li><p> Libros de especialidad</p></li>
+                  <li><p> Sistematizaciones de Experiencias educativas, las cuales pueden ser consultadas en línea, respetando el reglamento de biblioteca de la ESFM-EA, Capitulo 4, Articulo 12, inciso c.</p></li>
+                </ul>
+							</p>
+						</div>
+					</div>
+
+          <div class="col-12 col-md-12 columna-rosada grupo1">
+						<div class="bloque-columna-rosada">
+							<p>
+                <h3>Enlaces a otras bibliotecas virtuales</h3><br>
+
+                <h4>INTERNACIONALES</h4>
+                <ul>
+                  <li><h4><a href='http://scielo.org/php/index.php'>Scielo internacional </a></h4></li>
+                  <li><h4><a href='http://www.redalyc.org/home.oa'>Redalyc</a></h4></li>
+                  <li><h4><a href='https://alicia.concytec.gob.pe/vufind/'>Repositorio Peruano Alicia </a></h4></li>
+                  <li><h4><a href='https://scholar.google.com/ '>Google Escolar</a></h4></li>
+                  <li><h4><a href='https://academic.microsoft.com/ '>Biblioteca virtual de Microsft</a></h4></li>
+                  <li><h4><a href='http://lareferencia.info/vufind/ '>Red de Respositorios La Referecia </a></h4></li>
+                  <li><h4><a href='https://www.redib.org/recursos/'>Red Iberoamericana de Innovación y Conocimiento Científico</a></h4></li>
+                  <li><h4><a href='https://eric.ed.gov/'>Instituto de Educación y ciencias</a></h4></li>
+                  <li><h4><a href='https://doaj.org/'>Directorio de Revistas de Acceso Abierto</a></h4></li>
+                  <li><h4><a href='http://www.latindex.ppl.unam.mx/'>Portal de Portales Latindex</a></h4></li>
+                  <li><h4><a href='https://zbmath.org/'>Zentralblatt MATH</a></h4></li>
+                  <li><h4><a href='http://repec.org/'>Re search Papers in Economics</a></h4></li>
+                  <li><h4><a href='https://www.ncbi.nlm.nih.gov/pubmed/'>Recursos de la Biblioteca Nacional de los EEUU</a></h4></li>
+                  <li><h4><a href='https://www.educacion.gob.es/teseo/irGestionarConsulta.do'>Tesis Doctorales (TESEO)</a></h4></li>
+                  <li><h4><a href='https://www.tesisenred.net/'>Tesis Doctorales en Linea (TDX)</a></h4></li>
+                </ul>
+
+                <h4>NACIONALES</h4>
+                <ul>
+                  <li><h4><a href='http://www.scielo.org.bo'>Scielo Bolivia </a></h4></li>
+                  <li><h4><a href='http://www.revistasbolivianas.org.bo'>Revistas Bolivianas</a></h4></li>
+                  <li><h4><a href='http://ojs.bolivia.bo/'>OJS Bolivia</a></h4></li>
+                </ul>
+
+                <h4>PEDAGOGICOS</h4>
+                <ul>
+                  <li><h4><a href='http://biblioteca.minedu.gob.bo/'>Ministerio de Educacion Bolivia</a></h4></li>
+                  <li><h4><a href='https://es-la.facebook.com/ProfesoresDeBolivia/posts/_-biblioteca-pedagogica-virtualaudios-del-campo-comunidad-y-sociedad-para-el-exa/1690611141058496/'>profesores Bolivia</a></h4></li>
+                  <li><h4><a href='https://www.compartirpalabramaestra.org/articulos-informativos/una-biblioteca-virtual-con-132-libros-didacticos-para-docentes'>Libros didacticos para docentes</a></h4></li>
+                  <li><h4><a href='https://www.educaciontrespuntocero.com/libros/'>Educacion 3.0</a></h4></li>
+                </ul>
 							</p>
 						</div>
 					</div>
@@ -112,7 +160,6 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<h2>MISIÓN, VISIÓN</h2>
-						<a href="assets/pdf/proyectos.pdf" target="_blank" class="pdf-mobile pdf2"><i class="fas fa-file-pdf"></i></a>
 					</div>
 				</div>
 				<div class="row justify-content-center">
@@ -123,8 +170,7 @@
 								<h4>MISIÓN</h4>
 							</div>
 							<div class="lista-items-proyecto">
-								<h3>MISIÓN
-									Somos una institución formadora de Maestros y Maestras que orienta los procesos formativos, con pertinencia académica a la realidad social, cultural y económica del estudiante en el modelo Socio comunitario Productivo que permite responder con idoneidad a las demandas de la región y el país.
+								<h3>Somos una institución formadora de Maestros y Maestras que orienta los procesos formativos, con pertinencia académica a la realidad social, cultural y económica del estudiante en el modelo Socio comunitario Productivo que permite responder con idoneidad a las demandas de la región y el país.
 								</h3>
 							</div>
 						</div>
@@ -177,7 +223,7 @@
 						<a href="assets/pdf/analisis_y_discusion_de_gerencia.pdf" target="_blank"class="bloque-anexos">
 							<span class="izquierda">
 								Telefono<br>
-								626262
+								26246339
 							</span>
 							<span class="derecha">
 								<i class="fas fa-phone"></i>
@@ -188,7 +234,7 @@
 						<a href="assets/pdf/resumen_de_operaciones.pdf" target="_blank" class="bloque-anexos">
 							<span class="izquierda">
 								Correo<br>
-								operaciones
+								bibliotecaesfmea.potosi@gmail.com
 							</span>
 							<span class="derecha">
 								<i class="fas fa-envelope"></i>
@@ -199,17 +245,22 @@
 						<a href="assets/pdf/estructura_accionaria.pdf" target="_blank" class="bloque-anexos">
 							<span class="izquierda">
 								Direccion<br>
-								Calle
+								Av. Circunvalación esquina 17 de Agosto
 							</span>
 							<span class="derecha">
 								<i class="fas fa-home"></i>
 							</span>
 						</a>
 					</div>
+          <div class="col-12 col-md-6 col-lg-5 wow fadeIn" data-wow-duration="1.5s">
+						<a href="assets/pdf/estructura_accionaria.pdf" target="_blank" class="bloque-anexos">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1191.8617754727386!2d-65.75157344055953!3d-19.57211989485776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f94e0e805f9f67%3A0xa4d6487ee5f88004!2sNORMAL.%20EDUARDO%20AVAROA!5e1!3m2!1ses!2sbo!4v1598718366228!5m2!1ses!2sbo" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+						</a>
+					</div>
 				</div>
 			</div>
-
 		</section>
+
 	</main>
 
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

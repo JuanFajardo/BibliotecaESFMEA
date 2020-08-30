@@ -82,10 +82,10 @@ section.seccion.seccion-1 .imagen-fondo{width:100%;height:100%;-o-object-positio
 section.seccion.seccion-1 .imagen-fondo.abierto{opacity:.2;}
 section.seccion.seccion-1 .bloque-b{position:absolute;top:0;left:0;height:100%;-webkit-transform:translateX(-100%);-ms-transform:translateX(-100%);transform:translateX(-100%);}
 section.seccion.seccion-1 .bloque-b .imagen-b{height:100%;}
-section.seccion.seccion-1 .intro-paso-1{position:absolute;right:0rem;top:50%;text-align:right;-webkit-transform:translateY(-50%) translateX(120%);-ms-transform:translateY(-50%) translateX(120%);transform:translateY(-50%) translateX(120%);display:block;-webkit-transition-duration:1.5s;-o-transition-duration:1.5s;transition-duration:1.5s;-webkit-transition-property:all;-o-transition-property:all;transition-property:all;-webkit-transition-delay:.5s;-o-transition-delay:.5s;transition-delay:.5s;-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;}
+section.seccion.seccion-1 .intro-paso-1{position:absolute;right:0rem;top:50%;text-align:right;-webkit-transform:translateY(-50%) translateX(120%);-ms-transform:translateY(-50%) translateX(120%);transform:translateY(-50%) translateX(120%);display:block;-webkit-transition-duration:3.5s;-o-transition-duration:3.5s;transition-duration:3.5s;-webkit-transition-property:all;-o-transition-property:all;transition-property:all;-webkit-transition-delay:.5s;-o-transition-delay:.5s;transition-delay:.5s;-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;}
 section.seccion.seccion-1 .intro-paso-1.abierto{-webkit-transform:translateY(-50%) translateX(0%);-ms-transform:translateY(-50%) translateX(0%);transform:translateY(-50%) translateX(0%);right:6rem}
-section.seccion.seccion-1 .intro-paso-1 h1{font-size:8rem;color:#237e6f;margin:0;}
-section.seccion.seccion-1 .intro-paso-2{position:absolute;top:50%;right:0rem;-webkit-transform:translateY(-50%) translateX(120%);-ms-transform:translateY(-50%) translateX(120%);transform:translateY(-50%) translateX(120%);text-align:right;-webkit-transition-duration:1.5s;-o-transition-duration:1.5s;transition-duration:1.5s;-webkit-transition-property:all;-o-transition-property:all;transition-property:all;-webkit-transition-delay:.5s;-o-transition-delay:.5s;transition-delay:.5s;-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;}
+section.seccion.seccion-1 .intro-paso-1 h1{font-size:70px;color:#237e6f;margin:0;}
+section.seccion.seccion-1 .intro-paso-2{position:absolute;top:50%;right:0rem;-webkit-transform:translateY(-50%) translateX(120%);-ms-transform:translateY(-50%) translateX(120%);transform:translateY(-50%) translateX(120%);text-align:right;-webkit-transition-duration:3.5s;-o-transition-duration:3.5s;transition-duration:3.5s;-webkit-transition-property:all;-o-transition-property:all;transition-property:all;-webkit-transition-delay:.5s;-o-transition-delay:.5s;transition-delay:.5s;-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;}
 section.seccion.seccion-1 .intro-paso-2.abierto{-webkit-transform:translateY(-50%) translateX(0%);-ms-transform:translateY(-50%) translateX(0%);transform:translateY(-50%) translateX(0%);right:6rem}
 section.seccion.seccion-1 .intro-paso-2 h2{text-align:right;font-size:4rem;line-height:1.1;margin-bottom:1rem;}
 section.seccion.seccion-1 .intro-paso-2 h3{font-size:2.2rem;color:#237e6f;font-weight:600;}
@@ -110,15 +110,15 @@ section.seccion .borde-verde .columna-rosada{padding:.5rem;}
 section.seccion .borde-verde .columna-rosada .bloque-columna-rosada{height:100%;background-color:#fae6cc;padding:2.2rem 2.2rem 1.5rem;-webkit-transition:all .5s ease-out;-o-transition:all .5s ease-out;transition:all .5s ease-out;}
 section.seccion .borde-verde .columna-rosada .bloque-columna-rosada h3{
 	-webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
+    -webkit-user-select: none;
+     -khtml-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;font-size:2.3rem;font-weight:600;color:#e78000;-webkit-transition:all .5s ease-out;-o-transition:all .5s ease-out;transition:all .5s ease-out;}
 section.seccion .borde-verde .columna-rosada .bloque-columna-rosada p{
 	-webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
+    -webkit-user-select: none;
+     -khtml-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
@@ -126,9 +126,9 @@ section.seccion .borde-verde .columna-rosada .bloque-columna-rosada p{
 section.seccion .borde-verde .columna-rosada .bloque-columna-rosada p .numero-grande{font-size:4rem;line-height:1;}
 section.seccion .borde-verde .columna-rosada .bloque-columna-rosada:hover,
 section.seccion .borde-verde .columna-rosada .bloque-columna-rosada:active{background-color:#298175;}
-section.seccion .borde-verde .columna-rosada .bloque-columna-rosada:active h3, 
+section.seccion .borde-verde .columna-rosada .bloque-columna-rosada:active h3,
 section.seccion .borde-verde .columna-rosada .bloque-columna-rosada:active p,
-section.seccion .borde-verde .columna-rosada .bloque-columna-rosada:hover h3, 
+section.seccion .borde-verde .columna-rosada .bloque-columna-rosada:hover h3,
 section.seccion .borde-verde .columna-rosada .bloque-columna-rosada:hover p
 {color:#fff;}
 section.seccion .bloque-blanco-icono{background-color:#fff;padding:2rem;position:absolute;bottom:-2rem;right:0;}
@@ -203,7 +203,7 @@ section.seccion .borde-verde .columna-rosada .bloque-columna-rosada p{font-size:
 section.seccion .borde-verde .columna-rosada .bloque-columna-rosada p .numero-grande{font-size:3rem;}
 
 section.seccion .borde-verde .columna-rosada .bloque-columna-rosada.abierto{background-color:#298175;}
-section.seccion .borde-verde .columna-rosada .bloque-columna-rosada.abierto h3, 
+section.seccion .borde-verde .columna-rosada .bloque-columna-rosada.abierto h3,
 section.seccion .borde-verde .columna-rosada .bloque-columna-rosada.abierto p{color:#fff;}
 
 section.seccion.seccion-1 .intro-paso-1 h1{font-size:6rem;}

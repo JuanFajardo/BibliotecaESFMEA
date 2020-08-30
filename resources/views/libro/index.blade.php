@@ -13,9 +13,13 @@
       <div class="modal-body panel-body">
         {!! Form::open(['accept-charset'=>'UTF-8', 'enctype'=>'multipart/form-data', 'method'=>'POST', 'files'=>true, 'autocomplete'=>'off', 'id'=>'form-insert'] ) !!}
 
+     <div class="form-group">
+        <label for='tipo_' >TIPO</label>
+        {!! Form::select('tipo', ['libro'=>'LIBRO', 'sistematisaciones'=>'SISTEMATIZACION'], null, ['class'=>'form-control', 'id'=>'tipo_', 'required']) !!}
+     </div>
 		 <div class="form-group">
-			 <label for='foto_' >FOTO</label>
-			 {!! Form::text('foto', null, ['class'=>'form-control', 'id'=>'foto_', 'required']) !!}
+			 <label for='foto_' >IMAGEN DE LA PORTADA</label>
+			 {!! Form::file('foto', null, ['class'=>'form-control', 'id'=>'foto_']) !!}
 		 </div>
 		 <div class="form-group">
 			 <label for='titulo_' >TITULO</label>
@@ -26,23 +30,19 @@
 			 {!! Form::text('autor', null, ['class'=>'form-control', 'id'=>'autor_', 'required']) !!}
 		 </div>
 		 <div class="form-group">
-			 <label for='descripcion_' >DESCRIPCION</label>
+			 <label for='descripcion_' >DESCR. / DOC. ACOMPAÑANTE</label>
 			 {!! Form::text('descripcion', null, ['class'=>'form-control', 'id'=>'descripcion_', 'required']) !!}
 		 </div>
 		 <div class="form-group">
 			 <label for='archivo_' >ARCHIVO</label>
-			 {!! Form::file('archivo', null, ['class'=>'form-control', 'id'=>'archivo_', 'required']) !!}
+			 {!! Form::text('archivo', null, ['class'=>'form-control', 'id'=>'archivo_', 'required']) !!}
 		 </div>
 		 <div class="form-group">
-			 <label for='tipo_' >TIPO</label>
-			 {!! Form::select('tipo', ['libro'=>'libro', 'sistematisaciones'=>'sistematisaciones'], null, ['class'=>'form-control', 'id'=>'tipo_', 'required']) !!}
+			 <label for='id_categoria_' >CATEGORIA</label>
+			 {!! Form::select('id_categoria', \App\Categoria::pluck('nombre_categoria', 'id'), null, ['class'=>'form-control', 'placeholder'=>'', 'id'=>'id_categoria_', 'required']) !!}
 		 </div>
 		 <div class="form-group">
-			 <label for='id_categoria_' >ID_CATEGORIA</label>
-			 {!! Form::select('id_categoria', \App\Categoria::pluck('nombre_categoria', 'id'), null, ['class'=>'form-control', 'id'=>'id_categoria_', 'required']) !!}
-		 </div>
-		 <div class="form-group">
-			 <label for='id_subcategoria_' >ID_SUBCATEGORIA</label>
+			 <label for='id_subcategoria_' >SUBCATEGORIA</label>
 			 {!! Form::select('id_subcategoria', [], null, ['class'=>'form-control', 'id'=>'id_subcategoria_', 'required']) !!}
 		 </div>
 
@@ -66,36 +66,36 @@
       <div class="modal-body panel-body">
       {!! Form::open(['route'=>['Libro.update', ':DATO_ID'], 'method'=>'PATCH', 'id'=>'form-update' ])!!}
 
+     <div class="form-group">
+ 			 <label for="foto">IMAGEN DE LA PORTADA</label>
+ 			 {!! Form::select('tipo', ['libro'=>'LIBRO', 'sistematisaciones'=>'SISTEMATIZACION'], null, ['class'=>'form-control', 'id'=>'tipo']) !!}
+ 		 </div>
 		 <div class="form-group">
-			 <label for=" foto " >FOTO</label>
-			 {!! Form::text('foto', null, ['class'=>'form-control', 'id'=>'foto', 'required']) !!}
+			 <label for="foto">FOTO</label>
+			 {!! Form::file('foto', null, ['class'=>'form-control', 'id'=>'foto']) !!}
 		 </div>
 		 <div class="form-group">
-			 <label for=" titulo " >TITULO</label>
+			 <label for="titulo" >TITULO</label>
 			 {!! Form::text('titulo', null, ['class'=>'form-control', 'id'=>'titulo', 'required']) !!}
 		 </div>
 		 <div class="form-group">
-			 <label for=" autor " >AUTOR</label>
+			 <label for="autor" >AUTOR</label>
 			 {!! Form::text('autor', null, ['class'=>'form-control', 'id'=>'autor', 'required']) !!}
 		 </div>
 		 <div class="form-group">
-			 <label for=" descripcion " >DESCRIPCION</label>
+			 <label for="descripcion" >DESCR. / DOC. ACOMPAÑANTE</label>
 			 {!! Form::text('descripcion', null, ['class'=>'form-control', 'id'=>'descripcion', 'required']) !!}
 		 </div>
 		 <div class="form-group">
 			 <label for=" archivo " >ARCHIVO</label>
-       {!! Form::file('archivo', null, ['class'=>'form-control', 'id'=>'imagen', 'required']) !!}
+       {!! Form::text('archivo', null, ['class'=>'form-control', 'id'=>'imagen']) !!}
 		 </div>
 		 <div class="form-group">
-			 <label for=" tipo " >TIPO</label>
-			 {!! Form::select('tipo', ['libro'=>'libro', 'sistematisaciones'=>'sistematisaciones'], null, ['class'=>'form-control', 'id'=>'tipo', 'required']) !!}
+			 <label for="id_categoria" >CATEGORIA</label>
+       {!! Form::select('id_categoria', \App\Categoria::pluck('nombre_categoria', 'id'), null, ['class'=>'form-control', 'placeholder'=>'', 'id'=>'id_categoria', 'required']) !!}
 		 </div>
 		 <div class="form-group">
-			 <label for=" id_categoria " >ID_CATEGORIA</label>
-       {!! Form::select('id_categoria', \App\Categoria::pluck('nombre_categoria', 'id'), null, ['class'=>'form-control', 'id'=>'id_categoria', 'required']) !!}
-		 </div>
-		 <div class="form-group">
-			 <label for=" id_subcategoria " >ID_SUBCATEGORIA</label>
+			 <label for="id_subcategoria">SUBCATEGORIA</label>
        {!! Form::select('id_subcategoria', \App\Subcategoria::pluck('nombre_subcategoria', 'id'), null, ['class'=>'form-control', 'id'=>'id_subcategoria', 'required']) !!}
 		 </div>
       {!! Form::submit('Actualizar ', ['class'=>'btn btn-warning']) !!}
@@ -115,11 +115,11 @@
 			 <th> FOTO </th>
 			 <th> TITULO </th>
 			 <th> AUTOR </th>
-			 <th> DESCRIPCION </th>
+			 <th> DESCR./ </th>
 			 <th> ARCHIVO </th>
 			 <th> TIPO </th>
-			 <th> ID_CATEGORIA </th>
-			 <th> ID_SUBCATEGORIA </th>
+			 <th> CATEGORIA </th>
+			 <th> SUBCATEGORIA </th>
 
         <th>ACCIONES</th>
     </tr>
@@ -134,8 +134,8 @@
 			 <td> {{ $dato->descripcion }} </td>
 			 <td> <a href="{{asset('RughHXvNTFm9zzBett0zzPpFGaE2r7mjB9/'.$dato->archivo)}}"> Ver</a> </td>
 			 <td> {{ $dato->tipo }} </td>
-			 <td> {{ $dato->id_categoria }} </td>
-			 <td> {{ $dato->id_subcategoria }} </td>
+			 <td> {{ $dato->nombre_categoria }} </td>
+			 <td> {{ $dato->nombre_subcategoria }} </td>
 
        <td>
          <a href="#modalModifiar"  data-toggle="modal" data-target="" class="actualizar" style="color: #B8823B;"> <li class="fa fa-edit"></li></a>

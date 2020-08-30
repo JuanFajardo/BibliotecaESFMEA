@@ -17,12 +17,12 @@ class CreateUsersTable extends Migration
             $table->increments('id');
 
             $table->string('name');
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('password');
 
             $table->string('ci');
-            $table->string('ap_paterno');
-            $table->string('ap_materno');
+            $table->string('ap_paterno')->nullable();
+            $table->string('ap_materno')->nullable();
             $table->string('nombres');
             $table->string('nivel');
             $table->string('paralelo');
@@ -30,7 +30,7 @@ class CreateUsersTable extends Migration
             $table->string('reg_estudiante');
 
             $table->string('activo');
-            $table->string('grupo')->comment('estudiante,adinistrador,repote');
+            $table->string('grupo')->comment('estudiante,adinistrador');
 
             $table->rememberToken();
             $table->timestamps();

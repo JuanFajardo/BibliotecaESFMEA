@@ -18,7 +18,7 @@ Libro - {{$libro->titulo}}
     <iframe src="{{asset('/RughHXvNTFm9zzBett0zzPpFGaE2r7mjB9/'.$libro->archivo)}}" style="width:100%;height:670px;"></iframe>
 </div>
 @else
-<label class="btn btn-danger"> Su numero de intentos de visualizar sistematizaciones llego al limite</label>
+<label class="btn btn-danger"> Su numero de intentos de visualización llego al limite</label>
 @endif
 @endsection
 

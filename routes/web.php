@@ -29,9 +29,12 @@ Route::get('/home', function(){
     return redirect('/');
 });
 
-//Route::get('/Ver', 'CategoriaController@getListarSub');
+Route::post('/ReporteVisita', 'ReporteController@postReporteVisita')->name('Reporte.Visita');
+Route::post('/ReporteComentario', 'ReporteController@postReporteComentario')->name('Reporte.Comentario');
 
-Route::get('/Estudiante', 'EstudianteController@index');
+Route::get('/Archivos', 'EstudianteController@libroGet');
+Route::get('/Sistematizacion', 'EstudianteController@sistematizacionGet');
+
 Route::get('/Estudiante/Ver/{id}', 'EstudianteController@getVer');
 Route::post('/Estudiante/Comentario', 'EstudianteController@postComentario')->name('comentario');
 

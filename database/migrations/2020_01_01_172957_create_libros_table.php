@@ -10,11 +10,11 @@ class CreateLibrosTable extends Migration
     {
         Schema::create('libros', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('foto');
+            $table->string('foto')->nullable();
             $table->string('titulo');
             $table->string('autor');
             $table->text('descripcion');
-            $table->string('archivo');
+            $table->text('archivo');
             $table->string('tipo');
             $table->integer('id_categoria');
             $table->integer('id_subcategoria');

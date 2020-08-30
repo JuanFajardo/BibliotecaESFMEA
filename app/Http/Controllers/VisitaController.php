@@ -12,7 +12,11 @@ class VisitaController extends Controller
   }
 
   public function index(Request $request){
-    $datos = Visita::all();
+
+
+    $datos = \DB::table('visitas')->join('users', 'visitas.id_user', '=', 'users.id')
+                                  ->join('libros', 'visitas.id_libro', '=', 'libros.id')
+                                  ->select('visitas.*' ,'users.name' ,'libros.titulo')->get();
     if ($request->ajax()) {
       return $datos;
     }else{

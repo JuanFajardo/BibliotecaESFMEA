@@ -12,10 +12,10 @@
       <div class="modal-body panel-body">
         {!! Form::open(['accept-charset'=>'UTF-8', 'enctype'=>'multipart/form-data', 'method'=>'POST', 'files'=>true, 'autocomplete'=>'off', 'id'=>'form-insert'] ) !!}
 
-		 <div class="form-group"> 
-			 <label for='nombre_categoria_' >NOMBRE_CATEGORIA</label> 
-			 {!! Form::text('nombre_categoria', null, ['class'=>'form-control', 'id'=>'nombre_categoria_', 'required']) !!} 
-		 </div> 
+		 <div class="form-group">
+			 <label for='nombre_categoria_' >NOMBRE_CATEGORIA</label>
+			 {!! Form::text('nombre_categoria', null, ['class'=>'form-control', 'id'=>'nombre_categoria_', 'required']) !!}
+		 </div>
 
         {!! Form::submit('A&ntilde;adir', ['class'=>'agregar btn btn-primary']) !!}
         {!! Form::close() !!}
@@ -37,10 +37,10 @@
       <div class="modal-body panel-body">
       {!! Form::open(['route'=>['Categoria.update', ':DATO_ID'], 'method'=>'PATCH', 'id'=>'form-update' ])!!}
 
-		 <div class="form-group"> 
-			 <label for=" nombre_categoria " >NOMBRE_CATEGORIA</label> 
-			 {!! Form::text('nombre_categoria', null, ['class'=>'form-control', 'id'=>'nombre_categoria', 'required']) !!} 
-		 </div> 
+		 <div class="form-group">
+			 <label for=" nombre_categoria " >NOMBRE_CATEGORIA</label>
+			 {!! Form::text('nombre_categoria', null, ['class'=>'form-control', 'id'=>'nombre_categoria', 'required']) !!}
+		 </div>
 
       {!! Form::submit('Actualizar ', ['class'=>'btn btn-warning']) !!}
       {!! Form::close() !!}
@@ -68,7 +68,6 @@
 			 <td> {{ $dato->nombre_categoria }} </td>
 
        <td>
-         <a href="#modalAgregar"  data-toggle="modal" data-target="" class="ingredientes" style="color: #109813;"> <li class="fa fa-folder-open"></li></a>
          <a href="#modalModifiar"  data-toggle="modal" data-target="" class="actualizar" style="color: #B8823B;"> <li class="fa fa-edit"></li></a>
          <a href="#"  data-toggle="modal" data-target="" style="color: #ff0000;" class="eliminar"> <li class="fa fa-trash"></li></a>
        </td>
@@ -119,7 +118,7 @@
       if(data.length > 0){
         $.each(data, function(index, el) {
 
-		 $('#nombre_categoria').val(el.nombre_categoria); 
+		 $('#nombre_categoria').val(el.nombre_categoria);
 
         });
       }

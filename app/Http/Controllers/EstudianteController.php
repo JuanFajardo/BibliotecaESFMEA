@@ -18,6 +18,18 @@ class EstudianteController extends Controller
     return view('estudiante.index', compact('libros', 'sistemas'));
   }
 
+  public function libroGet(){
+    $libros = \App\Libro::Where('tipo', '=', 'libro')->get();
+    $titulo =  "LIBROS";
+    return view('estudiante.index', compact('libros', 'titulo'));
+  }
+
+  public function sistematizacionGet(){
+    $libros = \App\Libro::Where('tipo', '=', 'sistematisaciones')->get();
+    $titulo =  "SISTEMATIZACION";
+    return view('estudiante.index', compact('libros', 'titulo'));
+  }
+
   public function getVer($id){
     $idUser = \Auth::user()->id;
     $libro  = \App\Libro::find($id);
@@ -33,9 +45,12 @@ class EstudianteController extends Controller
 
     $ver = "SI";
 
-    if($libro->tipo != "libro"){
-      $contador = \App\Visita::Where('tipo', '=', 'sistematisaciones')->where('id_user', '=', $idUser)->count();
-      $ver = $contador<5 ?  "SI" : "NO";
+    $contador = \App\Visita::Where('tipo', '=', $libro->tipo)->where('id_user', '=', $idUser)->count();
+
+    if($libro->tipo == "libro"){
+      $ver = $contador < 4 ?  "SI" : "NO";
+    }else{
+      $ver = $contador < 3 ?  "SI" : "NO";
     }
 
     return view('estudiante.ver', compact('libro', 'ver'));
@@ -49,6 +64,6 @@ class EstudianteController extends Controller
     $dato->mensaje = $request->mensaje;
     $dato->id_user = \auth::user()->id;
     $dato->save();
-    return redirect('Estudiante');
+    return redirect('/');
   }
 }

@@ -13,22 +13,22 @@
       <div class="modal-body panel-body">
         {!! Form::open(['accept-charset'=>'UTF-8', 'enctype'=>'multipart/form-data', 'method'=>'POST', 'files'=>true, 'autocomplete'=>'off', 'id'=>'form-insert'] ) !!}
 
-		 <div class="form-group"> 
-			 <label for='remitente_' >REMITENTE</label> 
-			 {!! Form::text('remitente', null, ['class'=>'form-control', 'id'=>'remitente_', 'required']) !!} 
-		 </div> 
-		 <div class="form-group"> 
-			 <label for='correo_' >CORREO</label> 
-			 {!! Form::text('correo', null, ['class'=>'form-control', 'id'=>'correo_', 'required']) !!} 
-		 </div> 
-		 <div class="form-group"> 
-			 <label for='asunto_' >ASUNTO</label> 
-			 {!! Form::text('asunto', null, ['class'=>'form-control', 'id'=>'asunto_', 'required']) !!} 
-		 </div> 
-		 <div class="form-group"> 
-			 <label for='mensaje_' >MENSAJE</label> 
-			 {!! Form::text('mensaje', null, ['class'=>'form-control', 'id'=>'mensaje_', 'required']) !!} 
-		 </div> 
+		 <div class="form-group">
+			 <label for='remitente_' >REMITENTE</label>
+			 {!! Form::text('remitente', null, ['class'=>'form-control', 'id'=>'remitente_', 'required']) !!}
+		 </div>
+		 <div class="form-group">
+			 <label for='correo_' >CORREO</label>
+			 {!! Form::text('correo', null, ['class'=>'form-control', 'id'=>'correo_', 'required']) !!}
+		 </div>
+		 <div class="form-group">
+			 <label for='asunto_' >ASUNTO</label>
+			 {!! Form::text('asunto', null, ['class'=>'form-control', 'id'=>'asunto_', 'required']) !!}
+		 </div>
+		 <div class="form-group">
+			 <label for='mensaje_' >MENSAJE</label>
+			 {!! Form::text('mensaje', null, ['class'=>'form-control', 'id'=>'mensaje_', 'required']) !!}
+		 </div>
 
         {!! Form::submit('A&ntilde;adir', ['class'=>'agregar btn btn-primary']) !!}
         {!! Form::close() !!}
@@ -50,22 +50,22 @@
       <div class="modal-body panel-body">
       {!! Form::open(['route'=>['Comentario.update', ':DATO_ID'], 'method'=>'PATCH', 'id'=>'form-update' ])!!}
 
-		 <div class="form-group"> 
-			 <label for=" remitente " >REMITENTE</label> 
-			 {!! Form::text('remitente', null, ['class'=>'form-control', 'id'=>'remitente', 'required']) !!} 
-		 </div> 
-		 <div class="form-group"> 
-			 <label for=" correo " >CORREO</label> 
-			 {!! Form::text('correo', null, ['class'=>'form-control', 'id'=>'correo', 'required']) !!} 
-		 </div> 
-		 <div class="form-group"> 
-			 <label for=" asunto " >ASUNTO</label> 
-			 {!! Form::text('asunto', null, ['class'=>'form-control', 'id'=>'asunto', 'required']) !!} 
-		 </div> 
-		 <div class="form-group"> 
-			 <label for=" mensaje " >MENSAJE</label> 
-			 {!! Form::text('mensaje', null, ['class'=>'form-control', 'id'=>'mensaje', 'required']) !!} 
-		 </div> 
+		 <div class="form-group">
+			 <label for=" remitente " >REMITENTE</label>
+			 {!! Form::text('remitente', null, ['class'=>'form-control', 'id'=>'remitente', 'required']) !!}
+		 </div>
+		 <div class="form-group">
+			 <label for=" correo " >CORREO</label>
+			 {!! Form::text('correo', null, ['class'=>'form-control', 'id'=>'correo', 'required']) !!}
+		 </div>
+		 <div class="form-group">
+			 <label for=" asunto " >ASUNTO</label>
+			 {!! Form::text('asunto', null, ['class'=>'form-control', 'id'=>'asunto', 'required']) !!}
+		 </div>
+		 <div class="form-group">
+			 <label for=" mensaje " >MENSAJE</label>
+			 {!! Form::text('mensaje', null, ['class'=>'form-control', 'id'=>'mensaje', 'required']) !!}
+		 </div>
 
       {!! Form::submit('Actualizar ', ['class'=>'btn btn-warning']) !!}
       {!! Form::close() !!}
@@ -77,6 +77,20 @@
 
 
 @section('cuerpo')
+
+{!! Form::open(['route'=>'Reporte.Comentario', 'accept-charset'=>'UTF-8', 'enctype'=>'multipart/form-data', 'method'=>'POST', 'files'=>true, 'autocomplete'=>'off', 'id'=>'form-insert'] ) !!}
+  <div class="form-group">
+  <label for='inicio' >Fecha Inicio</label>
+  {!! Form::date('inicio', null, ['class'=>'form-control', 'id'=>'inicio']) !!}
+
+  <label for='fin' >Fecha Fin</label>
+  {!! Form::date('fin', null, ['class'=>'form-control', 'id'=>'fin']) !!}
+  </div>
+{!! Form::submit('Generar Reporte', ['class'=>'agregar btn btn-success']) !!}
+{!! Form::close() !!}
+
+<br><br>
+
 <table id="tablaAgenda" class="table display" cellspacing="0" width="100%">
   <thead>
     <tr>
@@ -99,7 +113,6 @@
 			 <td> {{ $dato->mensaje }} </td>
 
        <td>
-         <a href="#modalAgregar"  data-toggle="modal" data-target="" class="ingredientes" style="color: #109813;"> <li class="fa fa-folder-open"></li></a>
          <a href="#modalModifiar"  data-toggle="modal" data-target="" class="actualizar" style="color: #B8823B;"> <li class="fa fa-edit"></li></a>
          <a href="#"  data-toggle="modal" data-target="" style="color: #ff0000;" class="eliminar"> <li class="fa fa-trash"></li></a>
        </td>
@@ -150,10 +163,10 @@
       if(data.length > 0){
         $.each(data, function(index, el) {
 
-		 $('#remitente').val(el.remitente); 
-		 $('#correo').val(el.correo); 
-		 $('#asunto').val(el.asunto); 
-		 $('#mensaje').val(el.mensaje); 
+		 $('#remitente').val(el.remitente);
+		 $('#correo').val(el.correo);
+		 $('#asunto').val(el.asunto);
+		 $('#mensaje').val(el.mensaje);
 
         });
       }

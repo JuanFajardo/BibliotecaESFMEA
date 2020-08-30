@@ -12,7 +12,9 @@ class LibroController extends Controller
   }
 
   public function index(Request $request){
-    $datos = Libro::all();
+    $datos = \DB::table('libros')->join('categorias', 'libros.id_categoria', '=', 'categorias.id')
+                                 ->join('subcategorias', 'libros.id_subcategoria', '=', 'subcategorias.id')
+                                  ->select('libros.*', 'categorias.nombre_categoria', 'subcategorias.nombre_subcategoria')->get();
     if ($request->ajax()) {
       return $datos;
     }else{
@@ -34,7 +36,7 @@ class LibroController extends Controller
   }
 
   public function update(Request $request, $id){
-    
+
     if( $request->archivo != "" ){
       $dato = Libro::find($id);
       $dato->fill($request->all());

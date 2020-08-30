@@ -12,8 +12,8 @@ class CreateVisitasTable extends Migration
             $table->increments('id');
             $table->string('ip');
             $table->string('navegador');
-            $table->string('id_user');
-            $table->string('id_libro');
+            $table->integer('id_user');
+            $table->integer('id_libro');
             $table->string('tipo');
             $table->date('fecha');
             $table->timestamps();
