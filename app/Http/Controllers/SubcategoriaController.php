@@ -14,6 +14,7 @@ class SubcategoriaController extends Controller
   public function index(Request $request){
     $datos = Subcategoria::all();
     $datos = \DB::table('subcategorias')->join('categorias', 'id_categoria', '=', 'categorias.id')
+                                        ->select('subcategorias.*', 'categorias.nombre_categoria')
                                         ->get();
     if ($request->ajax()) {
       return $datos;
