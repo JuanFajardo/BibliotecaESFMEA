@@ -99,7 +99,9 @@
 						<div class="bloque-columna-rosada">
 							<p>
                 <h3>¿Qué ofrecemos?</h3><br>
+                <p>
                 Aquí podrá encontrar el detalle de la bibliografía, relacionada al contenido curricular de las asignaturas que se cursan en la ESFM-EA, a lo largo del proceso de formación del futuro maestr@, como:<br><br>
+                </p>
                 <ul>
                   <li><p> Libros de formación general para 1° y 2° año. </p></li>
                   <li><p> Libros de especialidad</p></li>
@@ -220,7 +222,6 @@
 				</div>
 				<div class="row justify-content-center">
 					<div class="col-12 col-md-6 col-lg-5 wow fadeIn" data-wow-duration="1.5s">
-						<a href="assets/pdf/analisis_y_discusion_de_gerencia.pdf" target="_blank"class="bloque-anexos">
 							<span class="izquierda">
 								Telefono<br>
 								26246339
@@ -228,10 +229,8 @@
 							<span class="derecha">
 								<i class="fas fa-phone"></i>
 							</span>
-						</a>
 					</div>
 					<div class="col-12 col-md-6 col-lg-5 wow fadeIn" data-wow-duration="1.5s">
-						<a href="assets/pdf/resumen_de_operaciones.pdf" target="_blank" class="bloque-anexos">
 							<span class="izquierda">
 								Correo<br>
 								bibliotecaesfmea.potosi@gmail.com
@@ -239,10 +238,8 @@
 							<span class="derecha">
 								<i class="fas fa-envelope"></i>
 							</span>
-						</a>
 					</div>
 					<div class="col-12 col-md-6 col-lg-5 wow fadeIn" data-wow-duration="1.5s">
-						<a href="assets/pdf/estructura_accionaria.pdf" target="_blank" class="bloque-anexos">
 							<span class="izquierda">
 								Direccion<br>
 								Av. Circunvalación esquina 17 de Agosto
@@ -250,12 +247,9 @@
 							<span class="derecha">
 								<i class="fas fa-home"></i>
 							</span>
-						</a>
 					</div>
           <div class="col-12 col-md-6 col-lg-5 wow fadeIn" data-wow-duration="1.5s">
-						<a href="assets/pdf/estructura_accionaria.pdf" target="_blank" class="bloque-anexos">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1191.8617754727386!2d-65.75157344055953!3d-19.57211989485776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f94e0e805f9f67%3A0xa4d6487ee5f88004!2sNORMAL.%20EDUARDO%20AVAROA!5e1!3m2!1ses!2sbo!4v1598718366228!5m2!1ses!2sbo" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-						</a>
 					</div>
 				</div>
 			</div>

@@ -33,6 +33,7 @@ class UsuarioController extends Controller
   }
 
   protected function create(Request $data){
+    //return $data->all();
     $data['password'] = bcrypt($data['password']);
     $dato = new User;
     $dato->fill($data->all());
@@ -47,21 +48,27 @@ class UsuarioController extends Controller
   }
 
   public function update(Request $request, $id){
+
     $user = User::find($id);
     if ( \Auth::user()->grupo == "Administrador"){
       $user = User::find($id);
-      $user->name       = $request->input('name');
-      $user->email      = $request->input('email');
       if( strlen($request->input('password')) > 0 )
         $user->password = bcrypt($request->input('password'));
-      $user->grupo      = $request->input('grupo');
-      $user->salud      = $request->input('salud');
+      $user->name         = $request->input('name');
+      $user->email        = $request->input('email');
+      $user->ci           = $request->input('ci');
+      $user->ap_paterno   = $request->input('ap_paterno');
+      $user->ap_materno   = $request->input('ap_materno');
+      $user->nombres      = $request->input('nombres');
+      $user->nivel        = $request->input('nivel');
+      $user->paralelo     = $request->input('paralelo');
+      $user->especialidad = $request->input('especialidad');
+      $user->reg_estudiante= $request->input('reg_estudiante');
+      $user->activo       = $request->input('activo');
+      $user->grupo        = $request->input('grupo');
       $user->save();
-      return redirect('/usuarios');
-    }else {
-      return redirect('/usuarios');
     }
-
+    return redirect('/usuarios');
   }
 
   public function viewuser($id){
@@ -74,6 +81,7 @@ class UsuarioController extends Controller
     $user = User::find($id);
     return view('auth.profile', compact('user'));
   }
+
 
   public function profileActulizar(Request $request){
     $id = \Auth::user()->id;

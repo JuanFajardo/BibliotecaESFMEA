@@ -88,7 +88,7 @@
 		 </div>
 		 <div class="form-group">
 			 <label for=" archivo " >ARCHIVO</label>
-       {!! Form::text('archivo', null, ['class'=>'form-control', 'id'=>'imagen']) !!}
+       {!! Form::text('archivo', null, ['class'=>'form-control', 'id'=>'archivo']) !!}
 		 </div>
 		 <div class="form-group">
 			 <label for="id_categoria" >CATEGORIA</label>
@@ -128,11 +128,11 @@
    @foreach($datos as $dato)
      <tr data-id="{{ $dato->id }}">
 
-			 <td> <img src="{{$dato->foto}}" width="50"> </td>
+			 <td> <img src="{{ asset('RughHXvNTFm9zzBett0zzPpFGaE2r7mjB9/'.$dato->foto)}}" width="50"> </td>
 			 <td> {{ $dato->titulo }} </td>
 			 <td> {{ $dato->autor }} </td>
 			 <td> {{ $dato->descripcion }} </td>
-			 <td> <a href="{{asset('RughHXvNTFm9zzBett0zzPpFGaE2r7mjB9/'.$dato->archivo)}}"> Ver</a> </td>
+			 <td> <a href="{{$dato->archivo}}"> Ver</a> </td>
 			 <td> {{ $dato->tipo }} </td>
 			 <td> {{ $dato->nombre_categoria }} </td>
 			 <td> {{ $dato->nombre_subcategoria }} </td>

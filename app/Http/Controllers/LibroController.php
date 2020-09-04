@@ -37,13 +37,13 @@ class LibroController extends Controller
 
   public function update(Request $request, $id){
 
-    if( $request->archivo != "" ){
+    if( $request->foto != "" ){
       $dato = Libro::find($id);
       $dato->fill($request->all());
       $dato->save();
     }else{
       $dato = Libro::find($id);
-      $dato->foto             = $request->foto;
+      $dato->archivo          = $request->archivo;
       $dato->titulo           = $request->titulo;
       $dato->autor            = $request->autor;
       $dato->descripcion      = $request->descripcion;

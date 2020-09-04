@@ -20,14 +20,14 @@
   <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables" @yield('menu4')>
     <a class="nav-link" href="{{asset('/index.php/Comentario')}}">
       <i class="fa fa-fw fa-list-ol"></i>
-      <span class="nav-link-text">Comentario</span>
+      <span class="nav-link-text">Comentarios</span>
     </a>
   </li>
 
   <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables" @yield('menu5')>
     <a class="nav-link" href="{{asset('/index.php/Visita')}}">
       <i class="fa fa-fw fa-clock"></i>
-      <span class="nav-link-text">Visita</span>
+      <span class="nav-link-text">Visitas</span>
     </a>
   </li>
   <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables" @yield('menu6')>
