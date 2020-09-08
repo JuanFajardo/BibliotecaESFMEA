@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
         // insert into afiliados(numero, matricula, paterno, materno, nombre, sexo, fecha_nacimiento, carnet, carnet_exp, regional, centro_salud, sigla, fecha_actualizacion, id_user, deleted_at, created_at, updated_at ) values( '1',  '00-0608 VRE',  'VILLAGOMEZ',  'ROLLANO',  'ERICK RICARDO',  'MASCULINO',  '2000-06-08',  '12548013', 'CH',  'SUCRE',  'ASEGURADOS A LA CAJA BANCARIA ESTATAL DE SALUD',  'CBES',  current_timestamp,  '1',  null,  current_timestamp,  null );
-/*
+
         \DB::table('users')->insert([
           'id' => '1',
           'name' => 'biblioteca',
@@ -637,7 +637,7 @@ class DatabaseSeeder extends Seeder
 
 
 
-        */
+/*
 
         \DB::table('libros')->insert(['id'=>'1', 'foto'=>'', 'titulo'=>'ACCIONES EDUCATIVAS ORIENTADAS AL FORTALECIMIENTO DEL VALOR DE LA RESPONSABILIDAD EN AULA Y COMUNIDAD EN LOS ESTUDIANTES DEL 5TO GRADO B DEL COLEGIO NACIONAL MIXTO LITORAL DE LA COMUNIDAD DE PUNA ', 'autor'=>'CHURATA GARABITO JHERSON FRANCO,JUAN CHACON PASCUAL ', 'descripcion'=>'LIC.VIDAL ESPINOZA CAZAS', 'archivo'=>'https://drive.google.com/file/d/1ok_G8dTVdaJEa7PJBT1l-cmB2-H4XH7P/view?usp=sharing', 'tipo'=>'SISTEMATIZACION', 'id_categoria'=>'1', 'id_subcategoria'=>'4' ]);
 \DB::table('libros')->insert(['id'=>'2', 'foto'=>'', 'titulo'=>'ANALISIS Y APLICACION DE LAS VARIABLES PSICOLOGICAS AUTOESTIMA Y AUTOCONFIANZA PARA UN RENDIMIENTO EFICAZ Y EFICIENTE ', 'autor'=>'MURILLO AGUILAR EDDA,VARGAS SANCHEZ OSWALDO', 'descripcion'=>'LIC.LIMBERTH MAMANI CANAVIRI ', 'archivo'=>'https://drive.google.com/file/d/1UM4Yf8YeBTpeqI8OnyDqar5SWwhyiJ8f/view?usp=sharing', 'tipo'=>'SISTEMATIZACION', 'id_categoria'=>'1', 'id_subcategoria'=>'4' ]);
@@ -836,6 +836,6 @@ class DatabaseSeeder extends Seeder
 \DB::table('libros')->insert(['id'=>'194', 'foto'=>'', 'titulo'=>'EL MANEJO ADECUADO DE LOS RESIDUOS SÓLIDOS MEDIANTE ESTRATEGIAS PREVENTIVAS COMUNITARIAS', 'autor'=>'BENAVIDEZ LICED CARINA, CAYO CADIZ CARLA DELINA', 'descripcion'=>'CALVO AGUIRRE CARMEN ROSA', 'archivo'=>'https://drive.google.com/file/d/1WgEBLWENXoX1x5rv7aLOYcD8JNf-DCeE/view?usp=sharing', 'tipo'=>'SISTEMATIZACION', 'id_categoria'=>'3', 'id_subcategoria'=>'6' ]);
 \DB::table('libros')->insert(['id'=>'195', 'foto'=>'', 'titulo'=>'PLANTAS ORNAMENTALES COMO RECURSOS PEDAGOGICO PARA LA PRESERVACION DE LA MADRE TIERRA', 'autor'=>'TORRES CAMACHO ROSA, VEDIA MIRANDA FATIMA', 'descripcion'=>'ALVAREZ MURILLO NELIDA', 'archivo'=>'https://drive.google.com/file/d/1oDxe7ZPKh0sdR6uUSoyPGMGuAAbskuoC/view?usp=sharing', 'tipo'=>'SISTEMATIZACION', 'id_categoria'=>'3', 'id_subcategoria'=>'6' ]);
 
-
+*/
     }
 }

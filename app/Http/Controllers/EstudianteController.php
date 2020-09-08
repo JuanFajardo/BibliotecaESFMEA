@@ -13,19 +13,19 @@ class EstudianteController extends Controller
   }
 
   public function index(){
-    $libros   = \App\Libro::Where('tipo', '=', 'libro')->get();
-    $sistemas = \App\Libro::Where('tipo', '=', 'sistematisaciones')->get();
+    $libros   = \App\Libro::Where('tipo', '=', 'LIBRO')->get();
+    $sistemas = \App\Libro::Where('tipo', '=', 'SISTEMATIZACION')->get();
     return view('estudiante.index', compact('libros', 'sistemas'));
   }
 
   public function libroGet(){
-    $libros = \App\Libro::Where('tipo', '=', 'libro')->get();
+    $libros = \App\Libro::Where('tipo', '=', 'LIBRO')->get();
     $titulo =  "LIBROS";
     return view('estudiante.index', compact('libros', 'titulo'));
   }
 
   public function sistematizacionGet(){
-    $libros = \App\Libro::Where('tipo', '=', 'sistematisaciones')->get();
+    $libros = \App\Libro::Where('tipo', '=', 'SISTEMATIZACION')->get();
     $titulo =  "SISTEMATIZACION";
     return view('estudiante.index', compact('libros', 'titulo'));
   }
@@ -47,7 +47,7 @@ class EstudianteController extends Controller
 
     $contador = \App\Visita::Where('tipo', '=', $libro->tipo)->where('id_user', '=', $idUser)->count();
 
-    if($libro->tipo == "libro"){
+    if($libro->tipo == "LIBRO"){
       $ver = $contador < 4 ?  "SI" : "NO";
     }else{
       $ver = $contador < 3 ?  "SI" : "NO";
