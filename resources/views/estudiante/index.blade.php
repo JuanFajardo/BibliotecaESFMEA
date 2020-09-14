@@ -13,6 +13,8 @@
   <thead>
     <tr>
       <th>Imagen</th>
+      <th>Categoria</th>
+      <th>SubCategoria</th>
       <th>Titulo</th>
       <th>Autor</th>
       <th>Acceder</th>
@@ -22,6 +24,8 @@
 @foreach($libros as $libro)
   <tr>
     <td><img src="{{$libro->foto}}" width="75"> </td>
+    <td>{{$libro->nombre_subcategoria}}</td>
+    <td>{{$libro->nombre_categoria}}</td>
     <td>{{$libro->titulo}}</td>
     <td>{{$libro->autor}}</td>
     <td> <a href="{{asset('/index.php/Estudiante/Ver/'.$libro->id)}}" class="btn btn-info"> <i class="fa fa-file-pdf"></i> Ver</a> </td>

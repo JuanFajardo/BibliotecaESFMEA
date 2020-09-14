@@ -93,7 +93,8 @@
 <table id="tablaAgenda" class="table display" cellspacing="0" width="100%">
   <thead>
     <tr>
-			 <th> IP </th>
+			 <th> FECHA </th>
+       <th> IP </th>
 			 <th> NAVEGADOR </th>
 			 <th> USUARIO </th>
 			 <th> LIBRO </th>
@@ -104,7 +105,8 @@
    @foreach($datos as $dato)
      <tr data-id="{{ $dato->id }}">
 
-			 <td> {{ $dato->ip }} </td>
+			 <td> {{ $dato->fecha }} </td>
+       <td> {{ $dato->ip }} </td>
 			 <td> {{ $dato->navegador }} </td>
 			 <td> {{ $dato->name }} </td>
 			 <td> {{ $dato->titulo }} </td>
