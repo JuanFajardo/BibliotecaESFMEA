@@ -19,13 +19,22 @@ class EstudianteController extends Controller
   }
 
   public function libroGet(){
-    $libros = \App\Libro::Where('tipo', '=', 'LIBRO')->get();
+    $libros = \DB::table('libros')->join('categorias', 'libros.id_categoria', 'categorias.id')
+                                  ->join('subcategorias', 'libros.id_subcategoria', 'subcategorias.id')
+                                  ->select('libros.*', 'categorias.nombre_categoria', 'subcategorias.nombre_subcategoria')
+                                  ->where('tipo', '=', 'LIBRO')
+                                  ->get();
     $titulo =  "LIBROS";
     return view('estudiante.index', compact('libros', 'titulo'));
   }
 
+
   public function sistematizacionGet(){
-    $libros = \App\Libro::Where('tipo', '=', 'SISTEMATIZACION')->get();
+    $libros = \DB::table('libros')->join('categorias', 'libros.id_categoria', 'categorias.id')
+                                  ->join('subcategorias', 'libros.id_subcategoria', 'subcategorias.id')
+                                  ->select('libros.*', 'categorias.nombre_categoria', 'subcategorias.nombre_subcategoria')
+                                  ->where('libros.tipo', '=', 'SISTEMATIZACION')
+                                  ->get();
     $titulo =  "SISTEMATIZACION";
     return view('estudiante.index', compact('libros', 'titulo'));
   }
