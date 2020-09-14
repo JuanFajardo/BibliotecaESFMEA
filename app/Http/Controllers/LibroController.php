@@ -36,7 +36,7 @@ class LibroController extends Controller
   }
 
   public function update(Request $request, $id){
-
+    $dato = "";
     if( $request->foto != "" ){
       $dato = Libro::find($id);
       $dato->fill($request->all());
@@ -46,6 +46,7 @@ class LibroController extends Controller
       $dato->archivo          = $request->archivo;
       $dato->titulo           = $request->titulo;
       $dato->autor            = $request->autor;
+      $dato->foto             = $request->foto;
       $dato->descripcion      = $request->descripcion;
       $dato->tipo             = $request->tipo;
       $dato->id_categoria     = $request->id_categoria;

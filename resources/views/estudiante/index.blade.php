@@ -23,7 +23,7 @@
 <tbody>
 @foreach($libros as $libro)
   <tr>
-    <td><img src="{{$libro->foto}}" width="75"> </td>
+    <td><img src="{{$dato->foto}}" width="75"> </td>
     <td>{{$libro->nombre_subcategoria}}</td>
     <td>{{$libro->nombre_categoria}}</td>
     <td>{{$libro->titulo}}</td>

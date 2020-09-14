@@ -19,7 +19,7 @@
      </div>
 		 <div class="form-group">
 			 <label for='foto_' >IMAGEN DE LA PORTADA</label>
-			 {!! Form::file('foto', null, ['class'=>'form-control', 'id'=>'foto_']) !!}
+			 {!! Form::text('foto', null, ['class'=>'form-control', 'id'=>'foto_']) !!}
 		 </div>
 		 <div class="form-group">
 			 <label for='titulo_' >TITULO</label>
@@ -72,7 +72,7 @@
  		 </div>
 		 <div class="form-group">
 			 <label for="foto">FOTO</label>
-			 {!! Form::file('foto', null, ['class'=>'form-control', 'id'=>'foto']) !!}
+			 {!! Form::text('foto', null, ['class'=>'form-control', 'id'=>'foto']) !!}
 		 </div>
 		 <div class="form-group">
 			 <label for="titulo" >TITULO</label>
@@ -128,7 +128,7 @@
    @foreach($datos as $dato)
      <tr data-id="{{ $dato->id }}">
 
-			 <td> <img src="{{ asset('RughHXvNTFm9zzBett0zzPpFGaE2r7mjB9/'.$dato->foto)}}" width="50"> </td>
+			 <td> <img src="{{$dato->foto}}" width="50"> </td>
 			 <td> {{ $dato->titulo }} </td>
 			 <td> {{ $dato->autor }} </td>
 			 <td> {{ $dato->descripcion }} </td>
@@ -201,16 +201,14 @@
     $.getJSON(link, function(data, textStatus) {
       if(data.length > 0){
         $.each(data, function(index, el) {
-
-		 $('#foto').val(el.foto);
-		 $('#titulo').val(el.titulo);
-		 $('#autor').val(el.autor);
-		 $('#descripcion').val(el.descripcion);
-		 $('#archivo').val(el.archivo);
-		 $('#tipo').val(el.tipo);
-		 $('#id_categoria').val(el.id_categoria);
-		 $('#id_subcategoria').val(el.id_subcategoria);
-
+      		 $('#foto').val(el.foto);
+      		 $('#titulo').val(el.titulo);
+      		 $('#autor').val(el.autor);
+      		 $('#descripcion').val(el.descripcion);
+      		 $('#archivo').val(el.archivo);
+      		 $('#tipo').val(el.tipo);
+      		 $('#id_categoria').val(el.id_categoria);
+      		 $('#id_subcategoria').val(el.id_subcategoria);
         });
       }
     });
