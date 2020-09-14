@@ -67,8 +67,8 @@
       {!! Form::open(['route'=>['Libro.update', ':DATO_ID'], 'method'=>'PATCH', 'id'=>'form-update' ])!!}
 
      <div class="form-group">
- 			 <label for="foto">IMAGEN DE LA PORTADA</label>
- 			 {!! Form::select('tipo', ['libro'=>'LIBRO', 'sistematisaciones'=>'SISTEMATIZACION'], null, ['class'=>'form-control', 'id'=>'tipo']) !!}
+ 			 <label for="foto">TIPO</label>
+ 			 {!! Form::select('tipo', ['LIBRO'=>'LIBRO', 'SISTEMATIZACION'=>'SISTEMATIZACION'], null, ['class'=>'form-control', 'id'=>'tipo']) !!}
  		 </div>
 		 <div class="form-group">
 			 <label for="foto">FOTO</label>

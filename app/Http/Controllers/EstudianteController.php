@@ -53,7 +53,6 @@ class EstudianteController extends Controller
     $dato->save();
 
     $ver = "SI";
-
     $contador = \App\Visita::Where('tipo', '=', $libro->tipo)->where('id_user', '=', $idUser)->where('fecha', '=', date('Y-m-d'))->count();
 
     if( $libro->tipo == "LIBRO"){
