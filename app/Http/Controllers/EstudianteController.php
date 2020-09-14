@@ -54,9 +54,9 @@ class EstudianteController extends Controller
 
     $ver = "SI";
 
-    $contador = \App\Visita::Where('tipo', '=', $libro->tipo)->where('id_user', '=', $idUser)->count();
+    $contador = \App\Visita::Where('tipo', '=', $libro->tipo)->where('id_user', '=', $idUser)->where('fecha', '=', date('Y-m-d'))->count();
 
-    if($libro->tipo == "LIBRO"){
+    if( $libro->tipo == "LIBRO"){
       $ver = $contador < 4 ?  "SI" : "NO";
     }else{
       $ver = $contador < 3 ?  "SI" : "NO";
