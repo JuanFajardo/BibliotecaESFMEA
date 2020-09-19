@@ -10,7 +10,7 @@ class CreateLibrosTable extends Migration
     {
         Schema::create('libros', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('foto')->nullable();
+            $table->text('foto')->nullable();
             $table->text('titulo');
             $table->string('autor');
             $table->text('descripcion');
